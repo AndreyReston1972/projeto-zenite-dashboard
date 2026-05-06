@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Projeto Zênite | Dashboard Executivo</title>
+  <!-- mobile-patch-v2 -->
   <meta name="description" content="Dashboard executivo do Projeto Zênite — orçamento, quadro de áreas, cronograma físico-financeiro e SPE." />
   <style>
     :root{
@@ -210,6 +211,312 @@
       .panel,.kpi,.chart-card,.table-card,.phase,.spe-card,.quote{box-shadow:none; background:white; border-color:#ddd}
       *{color:#222!important}
     }
+  
+    /* ===== MOBILE PREMIUM PATCH — Galaxy S / iPhone / small screens ===== */
+    @media (max-width: 760px) {
+      html, body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+      }
+
+      body:before {
+        background-size: 42px 42px;
+        opacity: .55;
+      }
+
+      .wrap {
+        width: calc(100% - 28px) !important;
+        max-width: 100% !important;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+      }
+
+      .nav {
+        height: 68px !important;
+        padding: 10px 0 !important;
+      }
+
+      .brand {
+        min-width: 0 !important;
+        gap: 10px !important;
+      }
+
+      .mark {
+        width: 42px !important;
+        height: 42px !important;
+        border-radius: 14px !important;
+        font-size: 15px !important;
+      }
+
+      .brand strong {
+        font-size: 14px !important;
+        letter-spacing: .06em !important;
+      }
+
+      .brand small {
+        font-size: 10px !important;
+        letter-spacing: .18em !important;
+      }
+
+      .links {
+        display: none !important;
+      }
+
+      .hero {
+        padding: 28px 0 22px !important;
+      }
+
+      .hero-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 14px !important;
+      }
+
+      .panel {
+        border-radius: 22px !important;
+      }
+
+      .hero-main {
+        min-height: auto !important;
+        padding: 26px 22px 28px !important;
+      }
+
+      .hero-main:after {
+        width: 220px !important;
+        height: 220px !important;
+        right: -100px !important;
+        bottom: -100px !important;
+      }
+
+      .eyebrow {
+        font-size: 10px !important;
+        margin-bottom: 14px !important;
+        letter-spacing: .12em !important;
+      }
+
+      .eyebrow:before {
+        width: 24px !important;
+      }
+
+      h1 {
+        font-size: 48px !important;
+        line-height: .96 !important;
+        letter-spacing: -.04em !important;
+      }
+
+      .lead {
+        margin-top: 18px !important;
+        font-size: 15px !important;
+        line-height: 1.58 !important;
+      }
+
+      .actions {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+        margin-top: 22px !important;
+      }
+
+      .btn {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 13px 14px !important;
+      }
+
+      .hero-side {
+        padding: 14px !important;
+        gap: 10px !important;
+      }
+
+      .mini-card {
+        padding: 16px !important;
+        border-radius: 18px !important;
+      }
+
+      .mini-card span,
+      .kpi .label {
+        font-size: 12px !important;
+      }
+
+      .mini-card b,
+      .kpi .value {
+        font-size: 25px !important;
+        line-height: 1.05 !important;
+      }
+
+      .mini-card small,
+      .kpi .note {
+        font-size: 11px !important;
+      }
+
+      .section {
+        padding: 28px 0 !important;
+      }
+
+      .section-head {
+        display: block !important;
+        margin-bottom: 16px !important;
+      }
+
+      .section h2 {
+        font-size: 34px !important;
+        line-height: 1.06 !important;
+      }
+
+      .section p.sub {
+        font-size: 14px !important;
+        line-height: 1.55 !important;
+      }
+
+      .grid-4,
+      .grid-3,
+      .grid-2 {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .kpi,
+      .chart-card,
+      .spe-card {
+        padding: 17px !important;
+        border-radius: 20px !important;
+      }
+
+      .quote {
+        padding: 20px !important;
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+        border-radius: 20px !important;
+      }
+
+      .notice {
+        font-size: 13px !important;
+        line-height: 1.5 !important;
+        padding: 14px !important;
+        border-radius: 18px !important;
+      }
+
+      .bar-row {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 7px !important;
+      }
+
+      .bar-val {
+        text-align: left !important;
+      }
+
+      .timeline {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 10px !important;
+      }
+
+      .phase {
+        border-radius: 18px !important;
+        padding: 15px !important;
+      }
+
+      .tabs {
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        padding-bottom: 6px !important;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      .tab {
+        flex: 0 0 auto !important;
+        white-space: nowrap !important;
+      }
+
+      .table-card {
+        border-radius: 18px !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch;
+      }
+
+      table {
+        min-width: 760px !important;
+      }
+
+      th, td {
+        padding: 11px 12px !important;
+        font-size: 13px !important;
+      }
+
+      /* SPE mobile refinements */
+      .spe-card {
+        min-height: auto !important;
+        gap: 14px !important;
+      }
+
+      .logo-box {
+        height: 92px !important;
+        border-radius: 18px !important;
+      }
+
+      .logo-box.logo-vs {
+        padding: 0 !important;
+        background: #082b23 !important;
+      }
+
+      .logo-box.logo-cabo {
+        padding: 10px 12px !important;
+        background: #ffffff !important;
+      }
+
+      .logo-box img {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+      }
+
+      .spe-card h3 {
+        font-size: 18px !important;
+        line-height: 1.25 !important;
+      }
+
+      .spe-card p {
+        font-size: 14px !important;
+      }
+
+      footer {
+        padding: 30px 0 38px !important;
+        margin-top: 18px !important;
+      }
+
+      .footer-grid {
+        display: block !important;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .wrap {
+        width: calc(100% - 22px) !important;
+      }
+
+      h1 {
+        font-size: 42px !important;
+      }
+
+      .section h2 {
+        font-size: 30px !important;
+      }
+
+      .lead {
+        font-size: 14px !important;
+      }
+
+      .logo-box {
+        height: 86px !important;
+      }
+    }
+
   </style>
 </head>
 <body>
